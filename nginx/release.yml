@@ -11,4 +11,5 @@ spec:
       sourceRef:
         kind: GitRepository
         name: k8s-deploy
+        namespace: flux-system
       interval: 1m
