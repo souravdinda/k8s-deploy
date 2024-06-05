@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo2
+  name: podinfo
+  namespace: pod-info
 spec:
   minReadySeconds: 3
   revisionHistoryLimit: 5
