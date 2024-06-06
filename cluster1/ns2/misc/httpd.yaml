@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: misc-new
+  namespace: ns1
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: httpd-new
+  template:
+    metadata:
+      labels:
+        app: httpd-new
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:latest
+        ports:
+          - containerPort: 80
