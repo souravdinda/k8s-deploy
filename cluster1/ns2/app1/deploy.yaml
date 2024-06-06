@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-project-app1-new
+  name: nginx-project
   namespace: ns2
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: nginx-project-app1-new
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginx-project-app1-new
+        app: nginx
     spec:
       containers:
       - name: nginx
