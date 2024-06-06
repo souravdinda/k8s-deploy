@@ -7,14 +7,14 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: httpd-new-misc
+      app: nginx-new-misc
   template:
     metadata:
       labels:
-        app: httpd-new-misc
+        app: nginx-new-misc
     spec:
       containers:
-      - name: httpd
-        image: httpd:latest
+      - name: nginx
+        image: nginx:latest
         ports:
           - containerPort: 80
