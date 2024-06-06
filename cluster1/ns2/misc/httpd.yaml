@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: misc-new
-  namespace: ns2
+  namespace: misc
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: httpd-new
+      app: httpd-new-misc
   template:
     metadata:
       labels:
-        app: httpd-new
+        app: httpd-new-misc
     spec:
       containers:
       - name: httpd
