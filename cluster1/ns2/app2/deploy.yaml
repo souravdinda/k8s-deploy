@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-project-app2
+  name: nginx-project-app2-new
   namespace: ns1
 spec:
   replicas: 4
