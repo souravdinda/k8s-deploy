@@ -3,4 +3,4 @@ kind: Kustomization
 commonLabels:
   prune: "true"
 resources:
-  # - httpd.yaml
+  - httpd.yaml
