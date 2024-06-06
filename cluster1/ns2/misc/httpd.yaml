@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: misc-new
+  name: misc-new-misc
   namespace: misc
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: nginx-new-misc
+      app: nginx-new
   template:
     metadata:
       labels:
-        app: nginx-new-misc
+        app: nginx-new
     spec:
       containers:
       - name: nginx
