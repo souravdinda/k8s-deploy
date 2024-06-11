@@ -19,5 +19,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  valuesFiles:
-    - values.yaml
+  values:
+    replicaCount: 6
+    serviceAccount:
+      create: false
