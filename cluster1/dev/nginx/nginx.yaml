@@ -12,3 +12,12 @@ spec:
           name: k8s-deploy
           namespace: flux-system
       interval: 1m
+  releaseName: nginx1
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    replicaCount: 5
