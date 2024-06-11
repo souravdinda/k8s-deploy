@@ -1,0 +1,38 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: mysql
+  namespace: stage
+spec:
+  type: oci
+  interval: 1m
+  url: oci://registry-1.docker.io/bitnamicharts
+
+---
+
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+ name: mysql-stage
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: mysql
+      sourceRef:
+          kind: HelmRepository
+          name: mysql
+          namespace: stage
+      interval: 1m
+  releaseName: mysql-stage
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    auth:
+      username: "myuser"
+      password: "mypassword"
+      database: "mydatabase"
