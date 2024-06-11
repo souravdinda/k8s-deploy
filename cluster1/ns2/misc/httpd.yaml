@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: misc-new-misc
+  name: misc-new-misc2
   namespace: misc
 spec:
   replicas: 4
